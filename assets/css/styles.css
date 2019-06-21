@@ -1,0 +1,89 @@
+@import url(icons.css);
+@import url(bootstrap-reboot.min.css);
+@import url(bootstrap-grid.min.css);
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: .2s; }
+  a:hover {
+    text-decoration: none; }
+
+.primaryButton {
+  display: inline-block;
+  padding: 12px 78px;
+  background: #fff;
+  color: #0F384C;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px; }
+  .primaryButton:hover {
+    background: #EAAC44;
+    color: #fff; }
+
+header {
+  position: relative;
+  height: 100vh; }
+  header .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
+    height: 100px; }
+    header .navbar .navbar-nav .nav-item {
+      margin-left: 25px; }
+    header .navbar .navbar-nav .nav-link {
+      color: #fff; }
+      header .navbar .navbar-nav .nav-link:hover {
+        color: #EAAC44 !important; }
+    header .navbar .navbar-nav .active .nav-link {
+      color: #EAAC44;
+      font-weight: 600; }
+  header .swiper-container {
+    height: 100%; }
+    header .swiper-container h2 {
+      font-size: 50px;
+      margin: 0 0 20px 0; }
+    header .swiper-container p {
+      margin-bottom: 20px; }
+    header .swiper-container .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    header .swiper-container .swiper-slide .cover-title-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+      header .swiper-container .swiper-slide .cover-title-wrapper > div {
+        height: 100%; }
+      header .swiper-container .swiper-slide .cover-title-wrapper .cover-title {
+        margin-top: 50px;
+        color: #fff; }
+  header footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; }
+    header footer .socialLinks a {
+      display: inline-block;
+      margin-right: 27px;
+      font-size: 34px;
+      color: #fff; }
+      header footer .socialLinks a:hover {
+        color: #EAAC44; }
+
+/*# sourceMappingURL=styles.css.map */
