@@ -1,82 +1,222 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <title>ivoyage</title>
-
+    <title>Bootstrap 4 Boilerplate</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+  </head>
 
-<body>
-<header>
+  <body>
+  <header>
     <nav class="navbar d-flex align-items-center">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="#">iVoyage</a>
-            <ul class="navbar-nav d-flex">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
-                </li>
-            </ul>
-        </div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt=""></a>
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="assets/images/cover-pic.png" alt="">
-                <div class="cover-title-wrapper">
-                    <div class="container d-flex align-items-center">
-                        <div class="row no-gutters">
-                            <article class="cover-title col-12 col-lg-6 ">
-                                <h2>Your Holiday
-                                    in Rome - Italy</h2>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                </p>
-                                <a href="#" class="primaryButton">more</a>
-                            </article>
-                        </div>
-                    </div>
-                </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/img/cover-pic.png" alt="">
+          <div class="cover-title-wrapper">
+            <div class="container d-flex align-items-center">
+              <div class="row no-gutters">
+                <article class="cover-title col-12 col-lg-6">
+                  <h2>Your Holiday
+                    in Rome - Italy</h2>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s.
+                  </p>
+                  <a href="#" class="primaryButton">more</a>
+                </article>
+              </div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+          </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
     <footer>
-        <div class="container">
-            <div class="socialLinks">
-                <a href=""><i class="icon-Instagram"></i></a>
-                <a href=""><i class="icon-Facebook"></i></a>
-            </div>
+      <div class="container">
+        <div class="socialLinks">
+          <a href=""><i class="icon-instagram"></i></a>
+          <a href=""><i class="icon-facebook"></i></a>
         </div>
+      </div>
     </footer>
-</header>
-<main></main>
-<footer></footer>
+  </header>
+  <main>
+    <section class="container" id="services">
+      <h2>Services</h2>
+      <div class="d-flex justify-content-between">
+        <div class="services-item">
+          <img src="assets/img/earth.svg" alt="earth">
+          <h4>Worldwide Tours</h4>
+          <a href="#" class="primaryButton">more</a>
+        </div>
+        <div class="services-item">
+          <img src="assets/img/plane.svg" alt="plan">
+          <h4>Airline Tickets</h4>
+          <a href="#" class="primaryButton">more</a>
+        </div>
+        <div class="services-item">
+          <img src="assets/img/ship.svg" alt="ship">
+          <h4>Cruises</h4>
+          <a href="#" class="primaryButton">more</a>
+        </div>
+        <div class="services-item">
+          <img src="assets/img/bag.svg" alt="bag">
+          <h4>Travel Insurance</h4>
+          <a href="#" class="primaryButton">more</a>
+        </div>
+      </div>
+    </section>
+    <section class="container" id="feedback">
+      <h2>Traveler's Feedback</h2>
+      <div class="feedback-card-swiper-container swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="feedback-card">
+              <img src="assets/img/avatar.png" alt="">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.</p>
+              <h4>Ani Sargsyan</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback-card">
+              <img src="assets/img/avatar.png" alt="">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.</p>
+              <h4>Ani Sargsyan</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback-card">
+              <img src="assets/img/avatar.png" alt="">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.</p>
+              <h4>Ani Sargsyan</h4>
+            </div>
+          </div>
+        </div>
+        <!--<div class="swiper-button-next"></div>-->
+        <!--<div class="swiper-button-prev"></div>-->
+      </div>
+    </section>
+    <section class="container" id="trip">
+      <h2>Random trips</h2>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="tour-container">
+            <img src="assets/img/egypt.png" alt="">
+            <div class="tour-details">3days - 200$</div>
+            <a href="#">Holiday in Egypt</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="tour-container">
+            <img src="assets/img/bali.png" alt="">
+            <div class="tour-details">7days - 1300$</div>
+            <a href="#">Holidays package in Bali</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="tour-container">
+            <img src="assets/img/hungary.png" alt="">
+            <div class="tour-details">7days - 1300$</div>
+            <a href="#">Visit the capital of Hungary</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container" id="about">
+      <div class="row no-gutters">
+        <div class="col-12 col-md-5 about-img">
+          <img src="assets/img/about.png" alt="">
+        </div>
+        <div class="col-12 col-md-7">
+          <article>
+            <h2>About us</h2>
+            <p>Ivoyage Travel is one of the best value tour agency and we've been conducting tours around the
+              world for
+              over 18 years.
+            </p>
+            <p>Our mission is to make travel fun, convenient and affordable for travellers.
+              Our passion is to inspire young people through life-changing travel experiences.
+              We build a company that offer affordable, comfortable tours that will give travellers the best
+              possible
+              value for money. </p>
+            <a href="#" class="primaryButton">more</a>
+          </article>
+        </div>
+      </div>
+    </div>
+    <section class="container" id="contact">
+      <h2>Contacts</h2>
+      <div class="d-flex">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="600" height="340" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=333%20S%20Central%20ave%2C%20suite%20100%20Glendale%2C%20California&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://www.pureblack.de"></a></div>
+        </div>
+        <div class="contact-details d-flex flex-column justify-content-between">
+          <div class="d-flex"><img src="assets/img/web.svg" alt=""><div>info@ivoyagetour.com</div></div>
+          <div class="d-flex"><img src="assets/img/web.svg" alt=""><div>http://www.ivoyagetour.com</div></div>
+          <div class="d-flex"><img src="src/icons-font/pin.svg" alt=""><div>333 S Central ave, suite 100
+            Glendale, California</div>
+          </div>
+          <div class="d-flex"><img src="assets/img/phone.png" alt=""><div>Call +1 818-740-4044</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="#"><img src="assets/img/logo.svg" alt="logo"></a>
+      </div>
+    </div>
+  </footer>
 
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/app.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+
+  </body>
 
 </html>
