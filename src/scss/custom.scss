@@ -1,122 +1,168 @@
 *, ::after, ::before {
-  box-sizing: border-box !important;
+    box-sizing: border-box !important;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: $white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3f7fb;
 }
 
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  color: $black;
-  text-decoration: none;
-  transition: .2s;
-
-  &:hover {
+    color: $black;
     text-decoration: none;
-  }
+    transition: .2s;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .primaryButton {
-  display: inline-block;
-  padding: 12px 78px;
-  background: $white;
-  color: $primaryBlue;
-  border-radius: 50px;
-  font-weight: $semi-bold;
-  font-size: 22px;
-  line-height: 27px;
+    display: inline-block;
+    padding: 12px 78px;
+    background: $white;
+    color: $primaryBlue;
+    border-radius: 50px;
+    font-weight: $semi-bold;
+    font-size: 22px;
+    line-height: 27px;
 
-  &:hover {
-    background: $primaryOrange;
-    color: $white;
-  }
+    &:hover {
+        background: $primaryOrange;
+        color: $white;
+    }
 }
 
 .feedback-card {
-  padding: 0 40px 20px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  margin-top: 90px;
+    padding: 0 40px 20px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 90px;
+    background-color: $white;
 
-  img {
-    max-width: 120px;
-    margin-top: -90px;
-    margin-bottom: 10px;
-    display: inline-block;
-    border-radius: 100%;
-  }
-
-  p {
-    position: relative;
-    height: 73px;
-    overflow: hidden;
-    color: $feedback-color;
-    font-weight: $medium;
-
-    &:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 5px;
-      width: 100px;
-      height: 18px;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), $white 50%);
+    img {
+        max-width: 120px;
+        margin-top: -90px;
+        margin-bottom: 10px;
+        display: inline-block;
+        border-radius: 100%;
     }
-  }
 
-  h4 {
-    color: $primaryBlue;
-    font-weight: $semi-bold;
-  }
+    p {
+        position: relative;
+        height: 73px;
+        overflow: hidden;
+        color: $feedback-color;
+        font-weight: $medium;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+            width: 100px;
+            height: 18px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), $white 50%);
+        }
+    }
+
+    h4 {
+        color: $primaryBlue;
+        font-weight: $semi-bold;
+    }
 }
 
 
 .tour-container {
-  img {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  a {
-    font-size: 26px;
-    font-weight: $semi-bold;
-    color: $primaryBlue;
-
-    &:hover {
-      color: $primaryOrange;
+     > img {
+        width: 100%;
+        border-radius: 4px 4px 0 0;
     }
-  }
 
-  .tour-details {
-    padding: 17px;
-    margin-bottom: 10px;
-    font-weight: $semi-bold;
-    font-size: 20px;
-    background-color: $primaryBlue;
-    color: $white;
-    border-radius: 0 0 4px 4px;
-  }
+    a {
+        font-size: 26px;
+        font-weight: $semi-bold;
+        color: $primaryBlue;
+
+        &:hover {
+            color: $primaryOrange;
+        }
+    }
+
+    .tour-details {
+        position: relative;
+        padding: 17px  70px 17px 17px;
+        margin-bottom: 10px;
+        font-weight: $semi-bold;
+        font-size: 20px;
+        background-color: $primaryBlue;
+        color: $white;
+        border-radius: 0 0 4px 4px;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: -1px;
+            bottom: 0;
+            height: 100%;
+        }
+    }
 }
-//google map
-.mapouter {
-  position: relative;
-  text-align: right;
-  height: 340px;
-  width: 600px;
+
+
+.social-links {
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+
+    a {
+        display: inline-block;
+        margin-right: 27px;
+        font-size: 0;
+        color: $white;
+
+        i {
+            font-size: 54px;
+        }
+
+        &:hover {
+            color: $primaryOrange;
+        }
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
 }
 
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 340px;
-  width: 600px;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .social-links {
+        a {
+            i {
+                font-size: 34px;
+            }
+        }
+    }
 }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

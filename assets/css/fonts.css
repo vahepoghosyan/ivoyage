@@ -26,9 +26,11 @@
 
 .icon-facebook:before {
   content: "\e900";
-  color: #fff;
 }
 .icon-instagram:before {
   content: "\e901";
-  color: #fff;
+}
+
+.icon-yelp:before {
+  content: "\e902";
 }
