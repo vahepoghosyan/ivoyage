@@ -1,12 +1,8 @@
 (function () {
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('#home-cover', {
         pagination: {
             el: '.swiper-pagination',
-            type: 'fraction',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            clickable: true,
         },
     });
     var swiper1 = new Swiper('.feedback-card-swiper-container', {

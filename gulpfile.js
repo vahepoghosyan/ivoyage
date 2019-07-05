@@ -1,7 +1,7 @@
 /**
  * Dependencies
  */
-const { series, parallel, watch, src, dest, task } = require('gulp');
+const { series, parallel, watch, src, dest } = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
@@ -14,50 +14,41 @@ const browserSync = require('browser-sync').create();
 const browserify = require('browserify');
 const notifier = require('node-notifier');
 
-const svgmin = require('gulp-svgmin');
-const iconfont = require('gulp-iconfont');
-const iconfontCss = require('gulp-iconfont-css');
-const sassUnicode = require('gulp-sass-unicode');
-// const runTimestamp = Math.round(Date.now()/1000);
-
-
 /**
  * Main config where you can define paths and browserSync settings
  * */
 const config = {};
 
-/** 
- * Source and distribition files folders 
+/**
+ * Source and distribition files folders
  * */
 config.paths = {
-    src: {
-        scss: 'src/scss',
-        js: 'src/js',
-        icons: 'src/svg'
-    },
-    dist: {
-        css: 'assets/css',
-        js: 'assets/js',
-        img: 'assets/img',
-        fonts: 'assets/fonts'
-    }
-};
+  src: {
+    scss: 'src/scss',
+    js: 'src/js',
+  },
+  dist: {
+    css: 'assets/css',
+    js: 'assets/js',
+    img: 'assets/img'
+  }
+}
 
-/** 
+/**
  * BrowserSync settings
- * 
+ *
  * uncomment "proxy" option and comment out "server" one
  * if you're using a local server
  * */
 config.browserSync = {
-    // proxy: 'localhost:8000'
-    server: { baseDir: "./" },
-    files: [
-        config.paths.dist.css,
-        config.paths.dist.js,
-        '**/*.html'
-    ],
-    notify: false
+  // proxy: 'localhost:8000'
+  server: { baseDir: "./" },
+  files: [
+    config.paths.dist.css,
+    config.paths.dist.js,
+    '**/*.html'
+  ],
+  notify: false
 };
 
 /**
@@ -67,91 +58,53 @@ config.browserSync = {
  */
 
 const handleError = (err, title) => {
-    console.log(err);
+  console.log(err);
 
-    notifier.notify({
-        title,
-        message: err.message,
-        sound: 'Basso'
-    });
-};
+  notifier.notify({
+    title,
+    message: err.message,
+    sound: 'Basso'
+  });
+}
 
 const compileSCSS = () => {
-    return src(`${config.paths.src.scss}/styles.scss`)
-        .pipe(sass().on('error', err => handleError(err, 'SCSS Compile Error')))
-        .pipe(autoprefixer())
-        .pipe(cleanCSS({ compatibility: '*' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(dest(config.paths.dist.css))
-};
-
-task('svgmin',() => {
-    return src([`${config.paths.src.icons}/*.svg`])
-      .pipe(svgmin())
-      .pipe(dest(config.paths.src.icons))
-});
-
-task('iconfont', () => {
-   const fontName = 'fonts';
-   src([`src/svg/*.svg`])
-     .pipe(iconfontCss({
-         fontName: fontName,
-         path: 'src/scss/icons/_template.scss',
-         targetPath: '../scss/icons/_icons.scss',
-         fontPath: '../../fonts/'
-     }))
-     .pipe(iconfont({
-         fontName: fontName,
-         prependUnicode: true,
-         formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
-     }))
-     .pipe(dest('src/fonts'))
-});
-
-// task('Iconfont', function(){
-//     return src(`${config.paths.src.fonts-font}/*.svg`)
-//       .pipe(iconfont({
-//           fontName: 'iconmoon', // required
-//           prependUnicode: true, // recommended option
-//           formats: ['ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
-//           timestamp: runTimestamp, // recommended to get consistent builds when watching files
-//       }))
-//       .on('glyphs', function(glyphs, options) {
-//           CSS templating, e.g.
-          // console.log(glyphs, options);
-      // })
-      // .pipe(dest(config.paths.dist.fonts-font));
-// });
+  return src(`${config.paths.src.scss}/styles.scss`)
+    .pipe(sass().on('error', err => handleError(err, 'SCSS Compile Error')))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({ compatibility: '*' }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(config.paths.dist.css))
+}
 
 const compileJS = () => {
-    return src(`${config.paths.src.js}/*.js`, { read: false })
-        .pipe(tap(file => {
-            file.contents = browserify(file.path, { debug: true })
-                .transform('babelify', { presets: ['@babel/preset-env'] })
-                .bundle();
-        }))
-        .pipe(buffer())
-        .pipe(uglify().on('error', err => handleError(err, 'JS Compile Error')))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(dest(config.paths.dist.js));
-};
+  return src(`${config.paths.src.js}/*.js`, { read: false })
+    .pipe(tap(file => {
+      file.contents = browserify(file.path, { debug: true })
+        .transform('babelify', { presets: ['@babel/preset-env'] })
+        .bundle();
+    }))
+    .pipe(buffer())
+    .pipe(uglify().on('error', err => handleError(err, 'JS Compile Error')))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(config.paths.dist.js));
+}
 
 const optimizeImages = () => {
-    return src(`${config.paths.dist.img}/**/*`)
-        .pipe(image())
-        .pipe(dest(config.paths.dist.img));
-};
+  return src(`${config.paths.dist.img}/**/*`)
+    .pipe(image())
+    .pipe(dest(config.paths.dist.img));
+}
 
 const liveReload = () => {
-    browserSync.init(config.browserSync)
-};
+  browserSync.init(config.browserSync)
+}
 
 /**
  * Watch files for changes
  */
 const watchForChanges = () => {
-    watch(`${config.paths.src.js}/**/*.js`, compileJS)
-    watch(`${config.paths.src.scss}/**/*.scss`, compileSCSS)
+  watch(`${config.paths.src.js}/**/*.js`, compileJS)
+  watch(`${config.paths.src.scss}/**/*.scss`, compileSCSS)
 };
 
 /**

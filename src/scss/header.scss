@@ -1,0 +1,160 @@
+header {
+  position: relative;
+  height: 100vh;
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
+    height: 140px;
+
+    .navbar-brand {
+      img {
+        height: 80px;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        margin-left: 25px;
+      }
+
+      .nav-link {
+        color: $white;
+
+        &:hover {
+          color: $primaryOrange !important;
+        }
+      }
+
+      .active {
+        .nav-link {
+          color: $primaryOrange;
+          font-weight: $semi-bold;
+        }
+      }
+    }
+  }
+
+  #home-cover {
+    height: 100%;
+
+    h2 {
+      font-size: 50px;
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+
+    }
+
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .cover-title-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+
+        > div {
+          height: 100%;
+        }
+
+        .cover-title {
+          margin-top: 50px;
+          color: $white;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      position: static;
+      //bottom: 80px;
+      //left: 50%;
+      //z-index: 2;
+      //transform: translateX(-50%);
+
+      .swiper-pagination-bullet {
+        margin: 0 22px;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background: $white;
+      opacity: 0.6;
+
+      &.swiper-pagination-bullet-active {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 77px;
+    left: 0;
+    z-index: 1;
+    font-size: 0;
+
+    .socialLinks {
+      display: inline-block;
+      position: relative;
+      margin-left: 75px;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 2px;
+        background-color: $white;
+      }
+
+      &:after {
+        left: 120px;
+      }
+
+      &:before {
+        right: 120px;
+      }
+
+      a {
+        display: inline-block;
+        margin-right: 27px;
+        font-size: 0;
+        color: $white;
+
+        i {
+          font-size: 34px;
+        }
+
+        &:hover {
+          color: $primaryOrange;
+        }
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
