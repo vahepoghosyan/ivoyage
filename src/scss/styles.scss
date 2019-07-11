@@ -1,9 +1,12 @@
 @import 'bootstrap';
 @import 'base/variables';
+@import 'base/mixins';
 @import 'custom';
 @import 'header';
 @import 'footer';
 @import 'services';
+@import 'about';
+@import 'contacts';
 
 header {
     .home-cover {
@@ -171,34 +174,6 @@ main {
             height: 250px;
         }
 
-        .contact-details {
-            height: 250px;
-            padding: 35px;
-            font-weight: $medium;
-            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-            color: $primaryBlue;
-            background-color: $white;
-            background-image: url("../../assets/img/transparent-logo-part.svg");
-            background-position: right center;
-            background-repeat: no-repeat;
-            background-size: 210px;
-
-
-            > div {
-                //margin-bottom: 20px;
-
-                &:last-of-type {
-                    margin: 0;
-                }
-
-                img {
-                    margin-right: 20px;
-                    display: inline-block;
-                    width: 26px;
-                    //vertical-align: middle;
-                }
-            }
-        }
     }
 }
 
@@ -351,7 +326,6 @@ main {
             }
 
 
-
             .feedback-prev {
                 //transform: rotate(180deg);
             }
@@ -396,23 +370,7 @@ main {
             }
         }
 
-        .contact {
-            .contact-details {
-                min-width: 50%;
-                padding: 45px;
-                //font-weight: $medium;
-                //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-                //color: $primaryBlue;
-                //background-color: $white;
 
-                img {
-                    //margin-right: 20px;
-                    //display: inline-block;
-                    //width: 26px;
-                    //vertical-align: middle;
-                }
-            }
-        }
     }
 }
 

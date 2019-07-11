@@ -23,6 +23,24 @@ a {
     }
 }
 
+input, textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+.with-overlay {
+    position: relative;
+
+    &:after {
+        content: '';
+        @include position(absolute, 0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+        touch-action: none;
+    }
+}
+
 .primary-button {
     display: inline-block;
     border-radius: 50px;
@@ -188,12 +206,12 @@ a {
 
     a {
         display: inline-block;
-        margin-right: 24px;
+        margin-right: 18px;
         font-size: 0;
         color: $white;
 
         i {
-            font-size: 24px;
+            font-size: 34px;
         }
 
         &:hover {
@@ -205,6 +223,55 @@ a {
         }
     }
 }
+
+.contact-details {
+    height: 250px;
+    padding: 35px;
+    font-weight: $medium;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    color: $primaryBlue;
+    background-color: $white;
+    background-image: url("../../assets/img/transparent-logo-part.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 210px;
+
+
+    > div {
+        //margin-bottom: 20px;
+
+        &:last-of-type {
+            margin: 0;
+        }
+
+        img {
+            margin-right: 20px;
+            display: inline-block;
+            width: 26px;
+            //vertical-align: middle;
+        }
+    }
+}
+
+.custom-field {
+    position: relative;
+
+    span {
+        position: absolute;
+        left: 30px;
+        background-color: $white;
+        transform: translateY(-50%);
+        padding: 0 10px;
+    }
+
+    input, textarea {
+        max-width: 340px;
+        padding: 10px 20px;
+        border: 1px solid $gray-2;
+        resize: none;
+    }
+}
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -331,6 +398,24 @@ a {
                 //right: -1px;
                 //bottom: 0;
                 //height: 100%;
+            }
+        }
+    }
+
+    .contact {
+        .contact-details {
+            min-width: 50%;
+            padding: 45px;
+            //font-weight: $medium;
+            //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+            //color: $primaryBlue;
+            //background-color: $white;
+
+            img {
+                //margin-right: 20px;
+                //display: inline-block;
+                //width: 26px;
+                //vertical-align: middle;
             }
         }
     }
