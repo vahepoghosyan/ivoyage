@@ -3,7 +3,7 @@ footer {
     padding: 20px 0;
     color: $white;
     background-color: $primaryBlue;
-    font-size: 12px;
+    font-size: 14px;
 
     nav {
         margin-bottom: 10px;
@@ -26,10 +26,7 @@ footer {
 
     .social-links {
         a {
-            margin-right: 10px;
-            i {
-                font-size: 12px;
-            }
+            margin-right: 24px;
         }
     }
 }
@@ -37,13 +34,13 @@ footer {
 @media (min-width: 992px) {
     footer {
         //margin-top: 76px;
-        padding: 34px;
+        padding: 34px 0;
         //color: $white;
         //background-color: $primaryBlue;
         font-size: 16px;
 
         nav {
-            //margin-bottom: 10px;
+            margin-bottom: 30px;
 
             ul {
                 li {
@@ -57,6 +54,14 @@ footer {
                             //color: $primaryOrange;
                         }
                     }
+                }
+            }
+        }
+        .social-links {
+            a {
+                //margin-right: 25px;
+                i {
+                    //font-size: 34px;
                 }
             }
         }

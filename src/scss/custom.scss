@@ -23,19 +23,65 @@ a {
     }
 }
 
-.primaryButton {
+.primary-button {
     display: inline-block;
-    padding: 12px 78px;
-    background: $white;
-    color: $primaryBlue;
     border-radius: 50px;
+    color: $white;
+    background-color: $primaryOrange;
     font-weight: $semi-bold;
-    font-size: 22px;
-    line-height: 27px;
 
     &:hover {
-        background: $primaryOrange;
+        background-color: $primaryBlue;
         color: $white;
+    }
+
+    &.white-to-orange {
+        background-color: $white;
+        color: $primaryBlue;
+
+        &:hover {
+            background-color: $primaryOrange;
+            color: $white;
+        }
+    }
+
+    &.white-to-blue {
+        background-color: $white;
+        color: $primaryBlue;
+
+        &:hover {
+            background-color: $primaryBlue;
+            color: $white;
+        }
+    }
+
+    &.orange-to-blue {
+        background-color: $primaryOrange;
+        color: $white;
+
+        &:hover {
+            background-color: $primaryBlue;
+        }
+    }
+
+    &.blue-to-orange {
+        background-color: $primaryBlue;
+        color: $white;
+
+        &:hover {
+            background-color: $primaryOrange;
+        }
+    }
+
+    &.button-little {
+        padding: 5px 30px;
+        font-size: 16px;
+    }
+
+    &.button-big {
+        padding: 8px 38px;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
@@ -54,22 +100,23 @@ a {
         border-radius: 100%;
     }
 
+    div {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden;
+
+        p {
+            //margin: 0;
+        }
+    }
+
     p {
-        position: relative;
+        //position: relative;
         height: 73px;
         overflow: hidden;
         color: $feedback-color;
         font-weight: $medium;
-
-        &:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: 5px;
-            width: 100px;
-            height: 18px;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), $white 50%);
-        }
     }
 
     h4 {
@@ -78,29 +125,47 @@ a {
     }
 }
 
+.next-prev-container {
+    .feedback-next,
+    .feedback-prev {
+        position: static;
+        margin: 0;
+        background-image: url("../../assets/img/arrow.svg");
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .feedback-prev {
+        transform: rotate(180deg);
+    }
+}
 
 .tour-container {
-     > img {
+    > img {
         width: 100%;
         border-radius: 4px 4px 0 0;
     }
 
-    a {
-        font-size: 26px;
-        font-weight: $semi-bold;
-        color: $primaryBlue;
+    h3 {
+        a {
+            font-size: 20px;
+            font-weight: $semi-bold;
+            color: $primaryBlue;
 
-        &:hover {
-            color: $primaryOrange;
+            &:hover {
+                color: $primaryOrange;
+            }
         }
     }
 
     .tour-details {
         position: relative;
-        padding: 17px  70px 17px 17px;
+        padding: 10px 50px 10px 10px;
         margin-bottom: 10px;
         font-weight: $semi-bold;
-        font-size: 20px;
+        font-size: 16px;
         background-color: $primaryBlue;
         color: $white;
         border-radius: 0 0 4px 4px;
@@ -123,12 +188,12 @@ a {
 
     a {
         display: inline-block;
-        margin-right: 27px;
+        margin-right: 24px;
         font-size: 0;
         color: $white;
 
         i {
-            font-size: 54px;
+            font-size: 24px;
         }
 
         &:hover {
@@ -146,7 +211,7 @@ a {
     .social-links {
         a {
             i {
-                font-size: 34px;
+                //font-size: 24px;
             }
         }
     }
@@ -154,6 +219,121 @@ a {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+    .social-links {
+        a {
+            i {
+                font-size: 34px;
+            }
+        }
+    }
+    .next-prev-container {
+        margin-top: -25px;
+
+        .feedback-next,
+        .feedback-prev {
+            height: 20px;
+        }
+    }
+
+    .primary-button {
+        //display: inline-block;
+        //border-radius: 50px;
+        //color: $white;
+        //background-color: $primaryOrange;
+        //font-weight: $semi-bold;
+
+        &:hover {
+            //background-color: $primaryBlue;
+            //color: $white;
+        }
+
+        &.white-to-orange {
+            //background-color: $white;
+            //color: $primaryBlue;
+
+            &:hover {
+                //background-color: $primaryOrange;
+                //color: $white;
+            }
+        }
+
+        &.white-to-blue {
+            //background-color: $white;
+            //color: $primaryBlue;
+
+            &:hover {
+                //background-color: $primaryBlue;
+                //color: $white;
+            }
+        }
+
+        &.orange-to-blue {
+            //background-color: $primaryOrange;
+            //color: $white;
+
+            &:hover {
+                //background-color: $primaryBlue;
+            }
+        }
+
+        &.blue-to-orange {
+            //background-color: $primaryBlue;
+            //color: $white;
+
+            &:hover {
+                //background-color: $primaryOrange;
+            }
+        }
+
+        &.button-little {
+            padding: 10px 45px;
+            font-size: 20px;
+        }
+
+        &.button-big {
+            padding: 12px 78px;
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+
+    .tour-container {
+        > img {
+            //width: 100%;
+            //border-radius: 4px 4px 0 0;
+        }
+
+        h3 {
+            a {
+                font-size: 26px;
+                //font-weight: $semi-bold;
+                //color: $primaryBlue;
+
+                &:hover {
+                    //color: $primaryOrange;
+                }
+            }
+        }
+
+        .tour-details {
+            //position: relative;
+            padding: 17px 70px 17px 17px;
+            //margin-bottom: 10px;
+            //font-weight: $semi-bold;
+            font-size: 20px;
+            //background-color: $primaryBlue;
+            //color: $white;
+            //border-radius: 0 0 4px 4px;
+
+            img {
+                //position: absolute;
+                //top: 0;
+                //right: -1px;
+                //bottom: 0;
+                //height: 100%;
+            }
+        }
+    }
 
 }
 
