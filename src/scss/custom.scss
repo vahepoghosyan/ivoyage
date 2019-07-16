@@ -424,7 +424,11 @@ input, textarea {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+    body {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 270px;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

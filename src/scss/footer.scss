@@ -33,6 +33,10 @@ footer {
 
 @media (min-width: 992px) {
     footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
         //margin-top: 76px;
         padding: 34px 0;
         //color: $white;
