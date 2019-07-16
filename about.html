@@ -16,13 +16,14 @@
 </head>
 
 <body>
-<header>
+<header class="white-background transparent-background">
     <nav class="navbar d-flex align-items-center">
         <div class="container d-flex justify-content-center align-items-center justify-content-sm-between">
             <div class="menu-burger d-sm-none">
-                <img src="assets/img/hamburger.svg" alt="">
+                <img src="assets/img/secondary-hamburger.svg" alt="">
             </div>
-            <a class="navbar-brand" href="#"><img src="assets/img/logo-desktop.svg" alt=""></a>
+            <a class="navbar-brand d-none d-sm-block" href="#"><img src="assets/img/logo-desktop.svg" alt=""></a>
+            <h1 class="d-sm-none">About</h1>
             <div class="d-none d-sm-block">
                 <ul class="navbar-nav d-flex">
                     <li class="nav-item active">
@@ -65,7 +66,7 @@
             <a href="#"><i class="icon-yelp"></i></a>
         </div>
     </div>
-    <div class="home-cover d-none d-md-block">
+    <div class="home-cover d-none d-sm-block">
         <div class="with-overlay">
             <video autoplay="" loop="" muted="">
                 <source src="assets/img/background.mp4" type="video/mp4">
@@ -74,6 +75,27 @@
     </div>
 </header>
 <main id="about">
+    <section class="container about">
+        <h2>About us</h2>
+        <div class="row no-gutters">
+            <div class="col-12 col-md-5 about-img">
+                <img src="assets/img/about.png" alt="">
+            </div>
+            <div class="col-12 col-md-7">
+                <article>
+                    <p>Ivoyage Travel is one of the best value tour agency and we've been conducting tours around the
+                        world for
+                        over 18 years.
+                    </p>
+                    <p>Our mission is to make travel fun, convenient and affordable for travellers.
+                        Our passion is to inspire young people through life-changing travel experiences.
+                        We build a company that offer affordable, comfortable tours that will give travellers the best
+                        possible
+                        value for money. </p>
+                </article>
+            </div>
+        </div>
+    </section>
     <section class="container services">
         <h2>Services</h2>
         <div class="row justify-content-lg-between">
@@ -101,117 +123,6 @@
                 <img src="assets/img/hotel.svg" alt="bag" class="mb-3">
                 <h4 class="mb-3">Travel Insurance</h4>
                 <a href="#" class="primary-button blue-to-orange button-little">call</a>
-            </div>
-        </div>
-    </section>
-    <section class="container trip">
-        <h2>Random trips</h2>
-        <div class="random-trips-swiper-container swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="tour-container">
-                        <img src="assets/img/egypt.png" alt="">
-                        <div class="tour-details">3days - 200$ <img src="assets/img/logo-part.svg" alt=""></div>
-                        <h3><a href="#">Holiday in Egypt</a></h3>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="tour-container">
-                        <img src="assets/img/bali.png" alt="">
-                        <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
-                        <h3><a href="#">Holidays package in Bali</a></h3>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="tour-container">
-                        <img src="assets/img/hungary.png" alt="">
-                        <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
-                        <h3><a href="#">Visit the capital of Hungary</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container about">
-        <h2 class="d-md-none">About us</h2>
-        <div class="row no-gutters">
-            <div class="col-12 col-md-5 about-img">
-                <img src="assets/img/about.png" alt="">
-            </div>
-            <div class="col-12 col-md-7">
-                <article>
-                    <h2 class="d-none d-md-block">About us</h2>
-                    <p>Ivoyage Travel is one of the best value tour agency and we've been conducting tours around the
-                        world for
-                        over 18 years.
-                    </p>
-                    <p>Our mission is to make travel fun, convenient and affordable for travellers.
-                        Our passion is to inspire young people through life-changing travel experiences.
-                        We build a company that offer affordable, comfortable tours that will give travellers the best
-                        possible
-                        value for money. </p>
-                    <a href="#" class="primary-button orange-to-blue button-little">more</a>
-                </article>
-            </div>
-        </div>
-    </section>
-    <section class="container feedback">
-        <h2>Traveler's Feedback</h2>
-        <div class="feedback-card-swiper-container swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="feedback-card">
-                        <img src="assets/img/avatar.png" alt="">
-                        <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's standard dummy text ever since the 1500s.</p>
-                        </div>
-                        <h4>Ani Sargsyan</h4>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="feedback-card">
-                        <img src="assets/img/avatar.png" alt="">
-                        <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's standard dummy text ever since the 1500s.</p>
-                        </div>
-                        <h4>Ani Sargsyan</h4>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="feedback-card">
-                        <img src="assets/img/avatar.png" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s.</p>
-                        <h4>Ani Sargsyan</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="next-prev-container d-flex justify-content-between">
-            <div class="swiper-button-prev feedback-prev"></div>
-            <div class="swiper-button-next feedback-next"></div>
-        </div>
-    </section>
-    <section class="container contact">
-        <h2>Contacts</h2>
-        <div class="d-md-flex">
-            <div id="map_canvas"></div>
-            <div class="contact-details d-flex flex-column justify-content-between">
-                <div class="d-flex"><img src="assets/img/web.svg" alt="">
-                    <div>info@ivoyagetour.com</div>
-                </div>
-                <div class="d-flex"><img src="assets/img/pin.svg" alt="">
-                    <div>333 S Central ave, suite 100
-                        Glendale, California
-                    </div>
-                </div>
-                <div class="d-flex"><img src="assets/img/phone.png" alt="">
-                    <div>Call +1 818-740-4044</div>
-                </div>
             </div>
         </div>
     </section>

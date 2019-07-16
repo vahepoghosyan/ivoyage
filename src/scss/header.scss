@@ -2,7 +2,13 @@ header {
     position: relative;
     height: 100vh;
 
-    &.secondary-page-nav {
+    &.transparent-background {
+        .navbar {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
+        }
+    }
+
+    &.white-background {
         height: auto;
         margin-bottom: 20px;
 
@@ -19,13 +25,29 @@ header {
         }
     }
 
+    //&.secondary-page-nav {
+    //    height: auto;
+    //    margin-bottom: 20px;
+    //
+    //    .navbar {
+    //        position: static;
+    //        height: 70px;
+    //        background: $bodyBackground;
+    //
+    //        h1 {
+    //            margin: 0;
+    //            color: $primaryBlue;
+    //            font-size: 20px;
+    //        }
+    //    }
+    //}
+
     .navbar {
         position: absolute;
         top: 0;
         right: 0;
         left: 0;
         z-index: 2;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
         height: 120px;
 
         .menu-burger {
@@ -37,6 +59,17 @@ header {
             }
         }
 
+        .navbar-nav {
+            .nav-item {
+                margin-left: 25px;
+
+                .nav-link {
+                    color: $white;
+                }
+            }
+
+        }
+
         .navbar-brand {
             img {
                 height: 80px;
@@ -46,16 +79,6 @@ header {
 
     }
 
-    .navbar-nav {
-        .nav-item {
-            margin-left: 25px;
-
-            .nav-link {
-                color: $white;
-            }
-        }
-
-    }
 
     .overlay {
         display: none;
@@ -125,20 +148,36 @@ header {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     header {
-        .navbar {
-            &.secondary-page-nav {
+        &.transparent-background {
+            height: 100vh;
+
+            .navbar {
+                position: absolute;
+                height: 110px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
+            }
+        }
+
+        &.dark-blue-background {
+            margin-bottom: 0;
+
+            .navbar {
+                height: 110px;
+                background: none;
                 background-color: $primaryBlue;
 
                 .navbar-nav {
                     .nav-item {
                         .nav-link {
-                            padding: 17px 0;
+                            padding: 46px 0;
                         }
                     }
                 }
-
             }
+        }
 
+
+        .navbar {
             .navbar-nav {
                 .nav-item {
                     .nav-link {
@@ -176,22 +215,7 @@ header {
             }
         }
 
-        &.secondary-page-nav {
-            margin-bottom: 0;
 
-            .navbar {
-                height: 110px;
-                background: $primaryBlue;
-
-                .navbar-nav {
-                    .nav-item {
-                        .nav-link {
-                            padding: 46px 0;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -219,7 +243,6 @@ header {
         //        }
         //    }
         //}
-
 
 
     }

@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<header class="secondary-page-nav">
+<header class="white-background dark-blue-background">
     <nav class="navbar d-flex align-items-center">
         <div class="container d-flex justify-content-center align-items-center justify-content-sm-between">
             <div class="menu-burger d-sm-none">
@@ -71,22 +71,70 @@
     <div class="navigation-container">
         <div class="container">
             <nav class="navbar-services d-flex justify-content-lg-end align-items-lg-center mt-sm-4 mt-lg-0">
-                <ul class="d-flex flex-wrap justify-content-center justify-content-lg-end">
-                    <li class="active mb-3 mb-lg-0">All</li>
-                    <li class="mb-3 mb-lg-0">Worldwide Tours</li>
-                    <li class="mb-3 mb-lg-0">Cruises</li>
-                    <li class="mb-3 mb-lg-0">Airline Tickets</li>
-                    <li class="mb-3 mb-lg-0">Travel Insurance</li>
-                    <li class="mb-3 mb-lg-0">Hotels</li>
+                <ul class="d-flex flex-wrap justify-content-center justify-content-lg-end nav-services-items">
+                    <li class="active mb-3 mb-lg-0" id="allServices">All</li>
+                    <li class="mb-3 mb-lg-0 nav-services-item" id="tab1">Worldwide Tours</li>
+                    <li class="mb-3 mb-lg-0 nav-services-item" id="tab2">Cruises</li>
+                    <!--<li class="mb-3 mb-lg-0 nav-services-item" id="tab3">Airline Tickets</li>-->
+                    <!--<li class="mb-3 mb-lg-0 nav-services-item" id="tab4">Travel Insurance</li>-->
+                    <!--<li class="mb-3 mb-lg-0 nav-services-item" id="tab5">Hotels</li>-->
                 </ul>
             </nav>
         </div>
     </div>
 
-    <section class="container trip">
+    <section class="container trip" data-tab="tab1">
         <h2>Random trips</h2>
-        <div class="random-trips-swiper-container swiper-container">
+        <div class="services-page-swiper-container swiper-container">
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="tour-container">
+                        <img src="assets/img/egypt.png" alt="">
+                        <div class="tour-details">3days - 200$ <img src="assets/img/logo-part.svg" alt=""></div>
+                        <h3><a href="#">Holiday in Egypt</a></h3>
+                        <a href="#" class="primary-button orange-to-blue button-little">more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tour-container">
+                        <img src="assets/img/bali.png" alt="">
+                        <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
+                        <h3><a href="#">Holidays package in Bali</a></h3>
+                        <a href="#" class="primary-button orange-to-blue button-little">more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tour-container">
+                        <img src="assets/img/hungary.png" alt="">
+                        <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
+                        <h3><a href="#">Visit the capital of Hungary</a></h3>
+                        <a href="#" class="primary-button orange-to-blue button-little">more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tour-container">
+                        <img src="assets/img/egypt.png" alt="">
+                        <div class="tour-details">3days - 200$ <img src="assets/img/logo-part.svg" alt=""></div>
+                        <h3><a href="#">Holiday in Egypt</a></h3>
+                        <a href="#" class="primary-button orange-to-blue button-little">more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tour-container">
+                        <img src="assets/img/bali.png" alt="">
+                        <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
+                        <h3><a href="#">Holidays package in Bali</a></h3>
+                        <a href="#" class="primary-button orange-to-blue button-little">more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tour-container">
+                        <img src="assets/img/hungary.png" alt="">
+                        <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
+                        <h3><a href="#">Visit the capital of Hungary</a></h3>
+                        <a href="#" class="primary-button orange-to-blue button-little">more</a>
+                    </div>
+                </div>
                 <div class="swiper-slide">
                     <div class="tour-container">
                         <img src="assets/img/egypt.png" alt="">
@@ -114,7 +162,7 @@
             </div>
         </div>
     </section>
-    <section class="container feedback">
+    <section class="container feedback" data-tab="tab2">
         <h2>Traveler's Feedback</h2>
         <div class="feedback-card-swiper-container swiper-container">
             <div class="swiper-wrapper">
@@ -164,7 +212,7 @@
             </div>
             <div class="col-md-8 col-lg-6">
                 <nav class="mb-4">
-                    <ul class="d-flex justify-content-between justify-content-md-start">
+                    <ul class="d-flex justify-content-center justify-content-md-start">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">About Us</a></li>
