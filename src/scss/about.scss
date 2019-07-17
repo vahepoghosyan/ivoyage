@@ -14,6 +14,42 @@ header {
     }
 }
 
+main {
+    .gallery {
+        .swiper-slide {
+            overflow: hidden;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                @include position(absolute, 0, 0, 0, 0);
+                background: rgba(15, 56, 76, 0.6);
+                opacity: 0;
+                transition: .3s;
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+
+                img {
+                    transform: scale(1.2);
+                }
+            }
+
+            //.with-overlay {
+            //    opacity: 0;
+
+            img {
+                transition: .3s;
+            }
+
+            //}
+        }
+    }
+}
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {

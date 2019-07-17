@@ -11,6 +11,8 @@
     <title>IVOYAGE travel agency</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.css"/>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
@@ -26,17 +28,17 @@
             <h1 class="d-sm-none">About</h1>
             <div class="d-none d-sm-block">
                 <ul class="navbar-nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="about.html">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
+                        <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -126,6 +128,24 @@
             </div>
         </div>
     </section>
+    <section class="container gallery">
+        <div id="aniimated-thumbnials">
+            <div class="gallery-swiper-container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg">
+
+                        <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg"/>
+                    </div>
+                    <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg">
+                        <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg"/>
+                    </div>
+                    <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg">
+                        <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <footer>
     <div class="container">
@@ -161,10 +181,7 @@
 </footer>
 
 <script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
-<script type="text/javascript"
-        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-eDHc6iMV6XV6gSRP9zVnmEFmenS3yxQ&sensor=false"></script>
-<script type="text/javascript" src="assets/js/oms.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.js"></script>
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/app.min.js"></script>
 

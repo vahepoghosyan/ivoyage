@@ -29,6 +29,27 @@ input, textarea {
     }
 }
 
+.lg-backdrop {
+    background: rgba(15, 56, 76, 0.8);
+}
+
+.lg-toolbar {
+    background-color: $primaryBlue;
+
+    .lg-icon {
+        color: $white;
+    }
+}
+
+#lg-counter {
+    color: $white;
+}
+
+.lg-actions .lg-next, .lg-actions .lg-prev {
+    background-color: $primaryBlue;
+    color: $white;
+}
+
 .with-overlay {
     position: relative;
 

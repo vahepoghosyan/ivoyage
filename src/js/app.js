@@ -1,6 +1,6 @@
 (function() {
-    if (document.querySelector("#home-cover")) {
-        var swiper = new Swiper("#home-cover", {
+    if (document.querySelector(".home-cover")) {
+        var swiper = new Swiper(".home-cover", {
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
@@ -154,5 +154,29 @@
             });
         });
     }
+    // $('#imageGallery').lightSlider({
+    //     gallery:true,
+    //     autoWidth:true,
+    //     loop:true,
+    //     slideMargin: 30,
+    //     thumbnail: false,
+    //     enableDrag: false,
+    //     currentPagerPosition:'left',
+    //     onSliderLoad: function(el) {
+    //         el.lightGallery({
+    //             selector: '#imageGallery .lslide'
+    //         });
+    //     }
+    // });
 
+    new Swiper(".gallery-swiper-container", {
+        slidesPerView: 2.5,
+        spaceBetween: 30
+
+    });
+    if (document.getElementById('aniimated-thumbnials')) {
+        $("#aniimated-thumbnials").lightGallery({
+            selector: ".swiper-slide"
+        });
+    }
 })();
