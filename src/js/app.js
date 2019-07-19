@@ -154,20 +154,6 @@
             });
         });
     }
-    // $('#imageGallery').lightSlider({
-    //     gallery:true,
-    //     autoWidth:true,
-    //     loop:true,
-    //     slideMargin: 30,
-    //     thumbnail: false,
-    //     enableDrag: false,
-    //     currentPagerPosition:'left',
-    //     onSliderLoad: function(el) {
-    //         el.lightGallery({
-    //             selector: '#imageGallery .lslide'
-    //         });
-    //     }
-    // });
 
     new Swiper(".gallery-swiper-container", {
         slidesPerView: 2.5,
@@ -179,4 +165,22 @@
             selector: ".swiper-slide"
         });
     }
+
+    var scrollTop = $(window).scrollTop();
+    if (window.innerWidth > 576 && scrollTop > document.querySelector('.transparent-background').offsetHeight - 120) {
+        document.querySelector('.navbar').classList.add('invert');
+    } else {
+        document.querySelector('.navbar').classList.remove('invert');
+    }
+
 })();
+
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (window.innerWidth > 576 && scrollTop > document.querySelector('.transparent-background').offsetHeight - 120) {
+        document.querySelector('.navbar').classList.add('invert');
+    } else {
+        document.querySelector('.navbar').classList.remove('invert');
+    }
+});
+

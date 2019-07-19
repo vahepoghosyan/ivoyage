@@ -5,15 +5,43 @@ header {
     &.transparent-background {
         .navbar {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
+
+            &.invert {
+                background: rgba(255, 255, 255, 0.8);
+
+                .menu-burger {
+                    img {
+                        filter: brightness(0);
+                    }
+                }
+
+                .navbar-nav {
+                    .nav-item {
+
+                        .nav-link {
+                            color: $primaryBlue;
+                        }
+                    }
+
+                }
+
+                .navbar-brand {
+                    img:first-of-type {
+                        display: none;
+                    }
+                    img:last-of-type{
+                        display: inline-block !important;
+                    }
+                }
+
+            }
         }
     }
 
     &.white-background {
         height: auto;
-        margin-bottom: 20px;
 
         .navbar {
-            position: static;
             height: 70px;
             background: $bodyBackground;
 
@@ -23,27 +51,12 @@ header {
                 font-size: 20px;
             }
         }
+
+
     }
 
-    //&.secondary-page-nav {
-    //    height: auto;
-    //    margin-bottom: 20px;
-    //
-    //    .navbar {
-    //        position: static;
-    //        height: 70px;
-    //        background: $bodyBackground;
-    //
-    //        h1 {
-    //            margin: 0;
-    //            color: $primaryBlue;
-    //            font-size: 20px;
-    //        }
-    //    }
-    //}
-
     .navbar {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         left: 0;
@@ -152,15 +165,13 @@ header {
             height: 100vh;
 
             .navbar {
-                position: absolute;
+                //position: absolute;
                 height: 110px;
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), rgba(255, 0, 0, 0) 90%);
             }
         }
 
         &.dark-blue-background {
-            margin-bottom: 0;
-
             .navbar {
                 height: 110px;
                 background: none;
