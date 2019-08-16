@@ -62,6 +62,10 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    #contacts-main.inner {
+        margin-top: 186px;
+    }
+
     #contacts-main {
         .contacts-form {
             .contact-details {
