@@ -145,7 +145,9 @@
                 document.querySelectorAll('[data-tab]').forEach(function (item) {
                     item.style.display = 'none';
                 });
-                document.querySelector('[data-tab=' + event.target.id + ']').style.display = 'block';
+
+                $('[data-tab=' + event.target.id + ']').fadeToggle('slow')
+
 
             });
         });
