@@ -1,7 +1,16 @@
 main {
     &#services {
-        section {
-            //display: none;
+        [data-tab*="tab"] {
+            display: none;
+        }
+        .airline-tickets {
+            img {
+                width: 100%;
+            }
+        }
+
+        .feedback{
+            margin-top: 35px;
         }
     }
 
@@ -39,6 +48,12 @@ main {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     main {
+        &#services {
+            .feedback{
+                margin-top: 76px;
+            }
+        }
+
         .navigation-container {
             //padding: ;
             background-color: #DCE6F2;

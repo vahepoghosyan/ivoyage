@@ -10,6 +10,7 @@
             width: 100%;
         }
 
+
         .contact-details {
             height: auto;
             background-image: none;
@@ -20,10 +21,10 @@
                 }
 
                 a {
-                    color: $primaryOrange;
+                    //color: $primaryOrange;
 
                     &:hover {
-                        color: $primaryBlue;
+                        //color: $primaryBlue;
                     }
                 }
             }

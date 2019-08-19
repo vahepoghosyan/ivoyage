@@ -124,20 +124,12 @@
             initialize();
         }
     });
-
-    var allServicesButton = document.querySelector("#allServices");
-    var allSections = document.querySelectorAll("section");
-    if (allServicesButton) {
-        allServicesButton.addEventListener("click", function(event) {
-            allSections.forEach(function(event) {
-                event.style.display = "block";
-            });
-            document.querySelectorAll(".nav-services-items li").forEach(function(item) {
-                item.classList.remove("active");
-            });
-            event.target.classList.add("active");
-        });
+    var tab1 = document.querySelector("#tab1");
+    if (tab1) {
+        tab1.classList.add("active");
+        document.querySelector('.worldwide-tours').style.display = "block";
     }
+
     var navServicesItems = document.querySelectorAll(".nav-services-item");
     if (navServicesItems) {
         navServicesItems.forEach(function(item) {
@@ -158,29 +150,57 @@
     new Swiper(".gallery-swiper-container", {
         slidesPerView: 2.5,
         spaceBetween: 30
-
     });
-    if (document.getElementById('aniimated-thumbnials')) {
+    new Swiper(".partners-swiper-container", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        autoplay: true,
+        breakpoints: {
+            370: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        },
+        navigation: {
+            // nextEl: ".swiper-button-next",
+            // prevEl: ".swiper-button-prev"
+        }
+    });
+
+
+    if (document.getElementById("aniimated-thumbnials")) {
         $("#aniimated-thumbnials").lightGallery({
             selector: ".swiper-slide"
         });
     }
 
     var scrollTop = $(window).scrollTop();
-    if (window.innerWidth > 576 && scrollTop > document.querySelector('.transparent-background').offsetHeight - 120) {
-        document.querySelector('.navbar').classList.add('invert');
-    } else {
-        document.querySelector('.navbar').classList.remove('invert');
+    if (document.querySelector(".transparent-background")) {
+        if (window.innerWidth > 576 && scrollTop > document.querySelector(".transparent-background").offsetHeight - 120) {
+            document.querySelector(".navbar").classList.add("invert");
+        } else {
+            document.querySelector(".navbar").classList.remove("invert");
+        }
     }
 
 })();
 
-$(window).scroll(function () {
+$(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
-    if (window.innerWidth > 576 && scrollTop > document.querySelector('.transparent-background').offsetHeight - 120) {
-        document.querySelector('.navbar').classList.add('invert');
-    } else {
-        document.querySelector('.navbar').classList.remove('invert');
+    if (document.querySelector(".transparent-background")) {
+        if (window.innerWidth > 576 && scrollTop > document.querySelector(".transparent-background").offsetHeight - 120) {
+            document.querySelector(".navbar").classList.add("invert");
+        } else {
+            document.querySelector(".navbar").classList.remove("invert");
+        }
     }
 });
 
