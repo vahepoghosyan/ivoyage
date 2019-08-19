@@ -18,17 +18,14 @@
 </head>
 
 <body>
-<header class="white-background transparent-background">
+<header class="white-background dark-blue-background" id="contacts-header">
     <nav class="navbar d-flex align-items-center">
         <div class="container d-flex justify-content-center align-items-center justify-content-sm-between">
             <div class="menu-burger d-sm-none">
                 <img src="assets/img/secondary-hamburger.svg" alt="">
             </div>
-            <a class="navbar-brand d-none d-sm-block" href="#">
-                <img src="assets/img/logo-desktop.svg" alt="">
-                <img class="d-none" src="assets/img/logo-invert.svg" alt="">
-            </a>
-            <h1 class="d-sm-none">About</h1>
+            <a class="navbar-brand d-none d-sm-block" href="#"><img src="assets/img/logo-desktop.svg" alt=""></a>
+            <h1 class="d-sm-none">Worldwide Tour</h1>
             <div class="d-none d-sm-block">
                 <ul class="navbar-nav d-flex">
                     <li class="nav-item">
@@ -44,10 +41,10 @@
                             <li><a href="services.html?tab5">Hotels</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="about.html">About us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
@@ -78,72 +75,37 @@
             <a href="#"><i class="icon-yelp"></i></a>
         </div>
     </div>
-    <div class="home-cover d-none d-sm-block">
-        <div class="with-overlay">
-            <video autoplay="" loop="" muted="">
-                <source src="assets/img/background.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
 </header>
-<main id="about" class="inner">
-    <section class="container about">
-        <h2>About us</h2>
+<main id="tour-details-page" class="inner">
+    <section class="container contacts-form">
+        <h2 class="d-none d-sm-block">Europe Tour from Paris</h2>
         <div class="row no-gutters">
-            <div class="col-12 col-md-5 about-img">
-                <img src="assets/img/about.png" alt="">
+            <div class="col-md-6">
+                <div class="tour-container">
+                    <img src="assets/img/bali.png" alt="">
+                    <div class="tour-details">7days - 1300$ <img src="assets/img/logo-part.svg" alt=""></div>
+                </div>
             </div>
-            <div class="col-12 col-md-7">
-                <article>
-                    <p>Ivoyage Travel is one of the best value tour agency and we've been conducting tours around the
-                        world for
-                        over 18 years.
-                    </p>
-                    <p>Our mission is to make travel fun, convenient and affordable for travellers.
-                        Our passion is to inspire young people through life-changing travel experiences.
-                        We build a company that offer affordable, comfortable tours that will give travellers the best
-                        possible
-                        value for money. </p>
-                </article>
-            </div>
-        </div>
-    </section>
-    <section class="container services">
-        <h2>Services</h2>
-        <div class="row justify-content-lg-between">
-            <div class="services-item col-6 col-md-4 col-lg-auto">
-                <img src="assets/img/earth.svg" alt="earth" class="mb-3">
-                <h4 class="mb-3">Worldwide Tours</h4>
-                <a href="#" class="primary-button blue-to-orange button-little">call</a>
-            </div>
-            <div class="services-item col-6 col-md-4 col-lg-auto">
-                <img src="assets/img/plane.svg" alt="plan" class="mb-3">
-                <h4 class="mb-3">Airline Tickets</h4>
-                <a href="#" class="primary-button blue-to-orange button-little">call</a>
-            </div>
-            <div class="services-item col-6 col-md-4 col-lg-auto">
-                <img src="assets/img/ship.svg" alt="ship" class="mb-3">
-                <h4 class="mb-3">Cruises</h4>
-                <a href="#" class="primary-button blue-to-orange button-little">call</a>
-            </div>
-            <div class="services-item col-6 col-md-4 col-lg-auto">
-                <img src="assets/img/bag.svg" alt="bag" class="mb-3">
-                <h4 class="mb-3">Travel Insurance</h4>
-                <a href="#" class="primary-button blue-to-orange button-little">call</a>
-            </div>
-            <div class="services-item col-6 col-md-4 col-lg-auto">
-                <img src="assets/img/hotel.svg" alt="bag" class="mb-3">
-                <h4 class="mb-3">Travel Insurance</h4>
-                <a href="#" class="primary-button blue-to-orange button-little">call</a>
+            <div class="col-md-6">
+                <div class="tour-info">
+                    <h4>5-Day Western Europe Tour</h4>
+                    <span class="tour-cites d-inline-block mb-2">from Paris: Reims | Cologne | Amsterdam | Brussels</span>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                        essentially unchanged.</p>
+                    <div class="tour-price mb-2">From USD  <span class="primary-orange">$435.55</span>/person</div>
+                    <div class="reservation-phone">Call for resservation: +99 345 345 45</div>
+                    <div class="locations"><span class="d-inline-block mr-4">Departure City:  Paris</span>  <span class="d-inline-block">End City:  Paris</span></div>
+                </div>
             </div>
         </div>
     </section>
     <section class="container gallery">
+        <h2>Photos from Paris</h2>
         <div id="aniimated-thumbnials">
             <div class="gallery-swiper-container swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg">
-
                         <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg"/>
                     </div>
                     <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg">

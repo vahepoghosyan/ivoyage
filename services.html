@@ -11,6 +11,8 @@
     <title>IVOYAGE travel agency</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.css"/>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
@@ -29,8 +31,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="services.html">Services</a>
+                    <li class="nav-item drop active">
+                        <a class="nav-link">Services</a>
+                        <ul class="navbar-dropdown">
+                            <li><a href="services.html?tab1">Worldwide Tours</a></li>
+                            <li><a href="services.html?tab2">Airline Tickets </a></li>
+                            <li><a href="services.html?tab3">Cruises</a></li>
+                            <li><a href="services.html?tab4">Travel Insurance</a></li>
+                            <li><a href="services.html?tab5">Hotels</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About us</a>
@@ -81,6 +90,7 @@
             </nav>
         </div>
     </div>
+    <!--    <div class="">-->
     <div class="worldwide-tours" data-tab="tab1">
         <section class="container">
             <h2>Worldwide Tours</h2>
@@ -201,13 +211,79 @@
         </section>
     </div>
     <div class="cruises" data-tab="tab3">
-        <section class="container"></section>
+        <section class="container">
+            <h2>Cruises</h2>
+            <p>When it comes to airlines, we’ve worked to secure exclusive pricing with several major airlines, with
+                both
+                domestic and international coverages. Depending on your desired destination, our travel agents will work
+                to
+                provide you with the latest exclusive pricing through Glamour Vacation. Remember, a vacation isn’t
+                really a
+                vacation until you’ve injected it with some glitz and glam, so be sure to ask your travel agent about
+                the
+                Glamour Vacation exclusive pricing, so that you can secure the best value for your next vacation right
+                from
+                the start.</p>
+        </section>
+        <section class="container">
+            <h2>Partners</h2>
+            <div class="partners-swiper-container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/oceania_cruises_logosvg.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/Airlane_logo.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/intune-logo_1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/intune-logo_1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/intune-logo_1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <div class="travel-insurance" data-tab="tab4">
-        <section class="container"></section>
+        <section class="container">
+            <h2>Travel Insurance</h2>
+            <p>When it comes to airlines, we’ve worked to secure exclusive pricing with several major airlines, with both domestic and international coverages. Depending on your desired destination,
+                our travel agents will work to provide you with the latest exclusive pricing through Glamour Vacation. Remember, a vacation isn’t really a vacation until you’ve injected it with some
+                glitz and glam, so be sure to ask your travel agent about the Glamour Vacation exclusive pricing, so that you can secure the best value for your next vacation right from the start.</p>
+            <a href="#" class="primary-button orange-to-blue button-little mt-3">Get Quote</a>
+        </section>
     </div>
     <div class="hotels" data-tab="tab5">
-        <section class="container"></section>
+        <section class="container">
+            <h2>Hotels</h2>
+            <p>When it comes to airlines, we’ve worked to secure exclusive pricing with several major airlines, with both domestic and international coverages. Depending on your desired destination,
+                our travel agents will work to provide you with the latest exclusive pricing through Glamour Vacation. Remember, a vacation isn’t really a vacation until you’ve injected it with some
+                glitz and glam, so be sure to ask your travel agent about the Glamour Vacation exclusive pricing, so that you can secure the best value for your next vacation right from the start.</p>
+            <a href="#" class="primary-button orange-to-blue button-little mt-3">Get Quote</a>
+        </section>
+        <section class="container gallery">
+            <h2>Photos</h2>
+            <div id="aniimated-thumbnials">
+                <div class="gallery-swiper-container swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg">
+
+                            <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg" />
+                        </div>
+                        <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg">
+                            <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg" />
+                        </div>
+                        <div class="swiper-slide" data-src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg">
+                            <img class="w-100" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <section class="container feedback">
         <h2>Traveler's Feedback</h2>
@@ -285,10 +361,7 @@
 </footer>
 
 <script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
-<script type="text/javascript"
-        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-eDHc6iMV6XV6gSRP9zVnmEFmenS3yxQ&sensor=false"></script>
-<script type="text/javascript" src="assets/js/oms.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.js"></script>
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/app.min.js"></script>
 

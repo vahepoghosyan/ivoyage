@@ -1,9 +1,9 @@
 main {
     &#services {
         [data-tab*="tab"] {
-            display: none;
+            //display: none;
         }
-        .airline-tickets {
+        .swiper-slide {
             img {
                 width: 100%;
             }
