@@ -72,6 +72,7 @@ input, textarea {
     color: $white;
     background-color: $primaryOrange;
     font-weight: $semi-bold;
+    border: 0;
 
     &:hover {
         background-color: $primaryBlue;
@@ -262,7 +263,13 @@ input, textarea {
     background-repeat: no-repeat;
     background-size: 210px;
 
-
+    a {
+        color: $primaryBlue;
+        line-height: 32px;
+        &:hover {
+            color: $primaryOrange;
+        }
+    }
     > div {
         //margin-bottom: 20px;
 
