@@ -24,17 +24,11 @@ footer {
         }
     }
 
-    .agent {
-        img {
-            width: 100px;
-        }
-    }
-
-    .social-links {
-        a {
-            //margin-right: 24px;
-        }
-    }
+    //.agent {
+    //    img {
+    //        height: 82px;
+    //    }
+    //}
 }
 
 @media (min-width: 992px) {
@@ -43,10 +37,7 @@ footer {
         right: 0;
         bottom: 0;
         left: 0;
-        //margin-top: 76px;
         padding: 34px 0;
-        //color: $white;
-        //background-color: $primaryBlue;
         font-size: 16px;
 
         nav {
@@ -57,23 +48,24 @@ footer {
                     margin-right: 20px;
                     font-size: 16px;
 
-                    a {
-                        //color: $white;
-
-                        &:hover {
-                            //color: $primaryOrange;
-                        }
+                    &:last-of-type {
+                        margin: 0;
                     }
                 }
             }
         }
-
-        .social-links {
-            a {
-                //margin-right: 25px;
-                i {
-                    //font-size: 34px;
-                }
+        .agent {
+            img {
+                height: 52px
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    footer {
+        .agent {
+            img {
+               height: 82px
             }
         }
     }
